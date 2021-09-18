@@ -31,12 +31,19 @@
 
 // const val3 = "const変数を再宣言";
 
-//constで定義してもobjectの中身は上書きできる
-//プロパティを変更、追加できる
-const val4 = {
-  name: "J2",
-  age: 33
-};
-val4.name = "object val4のnameを上書き";
-val4.address = "Yokohama";
-console.log(val4);
+// //constで定義してもobjectの中身は上書きできる
+// //プロパティを変更、追加できる
+// const val4 = {
+//   name: "J2",
+//   age: 33
+// };
+// val4.name = "object val4のnameを上書き";
+// val4.address = "Yokohama";
+// console.log(val4);
+
+//配列の中身も変更、追加できる
+//基本constで宣言して、上書きが必要な時にletを使用する
+const val5 = ["dog", "cat"];
+val5[0] = "bird";
+val5.push("monkey");
+console.log(val5);
