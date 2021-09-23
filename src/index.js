@@ -43,7 +43,20 @@
 
 //配列の中身も変更、追加できる
 //基本constで宣言して、上書きが必要な時にletを使用する
-const val5 = ["dog", "cat"];
-val5[0] = "bird";
-val5.push("monkey");
-console.log(val5);
+// const val5 = ["dog", "cat"];
+// val5[0] = "bird";
+// val5.push("monkey");
+// console.log(val5);
+
+//テンプレート文字列について
+const name = "J2";
+const age = 33;
+//「私の名前はJ2です。年齢は３３歳です。」
+
+//従来の方法
+const message1 = "私の名前は" + name + "です。年齢は" + age + "歳です。";
+console.log(message1);
+
+//テンプレート文字列を用いた方法
+const message2 = `私の名前は${name}です。年齢は${age}歳です。`;
+console.log(message2);
