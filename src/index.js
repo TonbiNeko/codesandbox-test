@@ -63,22 +63,37 @@
 // function func1(str) {
 //   return str;
 // }
-const func1 = function func1(str) {
-  return str;
-};
-console.log(func1("func1です！"));
-//アロー関数
-// const func2 = (str) => {
+// const func1 = function func1(str) {
 //   return str;
 // };
-//引数の（）省略できる※引数が一つの場合に可能
-//{}とreturnも省略した場合
-const func2 = (str) => str;
-console.log(func2("func2です！"));
-//単一式の時{}とreturn省略できる
-//{}の場合は必ずreturnが必要
+// console.log(func1("func1です！"));
+// //アロー関数
+// // const func2 = (str) => {
+// //   return str;
+// // };
+// //引数の（）省略できる※引数が一つの場合に可能
+// //{}とreturnも省略した場合
+// const func2 = (str) => str;
+// console.log(func2("func2です！"));
+// //単一式の時{}とreturn省略できる
+// //{}の場合は必ずreturnが必要
 
-const func3 = (num1, num2) => {
-  return num1 + num2;
+// const func3 = (num1, num2) => {
+//   return num1 + num2;
+// };
+// console.log(func3(10, 20));
+
+//分割代入　　オブジェクトの場合
+const myProfile = {
+  name: "J2",
+  age: 33
 };
-console.log(func3(10, 20));
+
+const message1 = `私の名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;
+console.log(message1);
+
+//指定のプロパティーを抜き出すことができる。
+//コードが簡潔になり、わかりやすい
+const { name, age } = myProfile;
+const message2 = `私の名前は${name}です。年齢は${age}歳です。`;
+console.log(message2);
