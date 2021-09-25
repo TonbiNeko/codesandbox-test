@@ -129,8 +129,29 @@
 // sumFunc(...arr1);
 
 //②一つにまとめる
-const arr2 = [1, 2, 3, 4, 5];
-const [num1, num2, ...arr3] = arr2;
-console.log(num1);
-console.log(num2);
-console.log(arr3);
+// const arr2 = [1, 2, 3, 4, 5];
+// const [num1, num2, ...arr3] = arr2;
+// console.log(num1);
+// console.log(num2);
+// console.log(arr3);
+
+//配列のコピー、結合
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+
+// const arr6 = [...arr4]; //arr4と全く同じ配列のarr6を作ることができる
+// console.log(arr6);
+// const arr7 = [...arr4, ...arr5];
+// console.log(arr7); //arr4 と arr5 を結合した配列 arr7 を作ることができる
+
+//配列をそのままコピーすると参照が引き継がれる
+// const arr8 = arr4;
+// arr8[0] = 100;
+// console.log(arr8);
+// console.log(arr4); //arr4も[100,20]となる
+
+//スプレッド構文だと影響を受けない
+const arr6 = [...arr4]; //arr4と全く同じ配列のarr6を作ることができる
+arr6[0] = 100;
+console.log(arr6);
+console.log(arr4);
