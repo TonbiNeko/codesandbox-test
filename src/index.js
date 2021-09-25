@@ -84,16 +84,25 @@
 // console.log(func3(10, 20));
 
 //分割代入　　オブジェクトの場合
-const myProfile = {
-  name: "J2",
-  age: 33
-};
+// const myProfile = {
+//   name: "J2",
+//   age: 33
+// };
 
-const message1 = `私の名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;
-console.log(message1);
+// const message1 = `私の名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;
+// console.log(message1);
 
-//指定のプロパティーを抜き出すことができる。
-//コードが簡潔になり、わかりやすい
-const { name, age } = myProfile;
-const message2 = `私の名前は${name}です。年齢は${age}歳です。`;
-console.log(message2);
+// //指定のプロパティーを抜き出すことができる。
+// //コードが簡潔になり、わかりやすい
+// const { name, age } = myProfile;
+// const message2 = `私の名前は${name}です。年齢は${age}歳です。`;
+// console.log(message2);
+
+//分割代入　　配列の場合
+const myProfile = ["J2", 33];
+const message3 = `私の名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
+console.log(message3);
+
+const [name, age] = myProfile;
+const message4 = `私の名前は${name}です。年齢は${age}歳です。`;
+console.log(message4);
