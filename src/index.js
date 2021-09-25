@@ -112,8 +112,18 @@
 // const message5 = `私の名前は${a}です。年齢は${b}歳です。`;
 // console.log(message5);
 
-//デフォルト値、引数について
-const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん`);
-sayHello("J2"); //こんにちは！J2さん
-sayHello(); //デフォルト引数なしだと⇨こんにちは!undefinedさん
-//引数にデフォルト値（初期値）を設定出来た。
+// //デフォルト値、引数について
+// const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん`);
+// sayHello("J2"); //こんにちは！J2さん
+// sayHello(); //デフォルト引数なしだと⇨こんにちは!undefinedさん
+// //引数にデフォルト値（初期値）を設定出来た。
+
+//スプレッド構文について...
+//①配列の展開
+const arr1 = [1, 2];
+// console.log(arr1);
+// console.log(...arr1);
+
+const sumFunc = (num1, num2) => console.log(num1 + num2);
+sumFunc(arr1[0], arr1[1]);
+sumFunc(...arr1);
