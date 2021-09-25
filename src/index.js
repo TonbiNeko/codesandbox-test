@@ -49,14 +49,36 @@
 // console.log(val5);
 
 //テンプレート文字列について
-const name = "J2";
-const age = 33;
-//「私の名前はJ2です。年齢は３３歳です。」
+// const name = "J2";
+// const age = 33;
+// //「私の名前はJ2です。年齢は３３歳です。」
+// //従来の方法
+// const message1 = "私の名前は" + name + "です。年齢は" + age + "歳です。";
+// console.log(message1);
+// //テンプレート文字列を用いた方法
+// const message2 = `私の名前は${name}です。年齢は${age}歳です。`;
+// console.log(message2);
 
-//従来の方法
-const message1 = "私の名前は" + name + "です。年齢は" + age + "歳です。";
-console.log(message1);
+//アロー関数について
+// function func1(str) {
+//   return str;
+// }
+const func1 = function func1(str) {
+  return str;
+};
+console.log(func1("func1です！"));
+//アロー関数
+// const func2 = (str) => {
+//   return str;
+// };
+//引数の（）省略できる※引数が一つの場合に可能
+//{}とreturnも省略した場合
+const func2 = (str) => str;
+console.log(func2("func2です！"));
+//単一式の時{}とreturn省略できる
+//{}の場合は必ずreturnが必要
 
-//テンプレート文字列を用いた方法
-const message2 = `私の名前は${name}です。年齢は${age}歳です。`;
-console.log(message2);
+const func3 = (num1, num2) => {
+  return num1 + num2;
+};
+console.log(func3(10, 20));
