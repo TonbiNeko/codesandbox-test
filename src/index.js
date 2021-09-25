@@ -98,11 +98,22 @@
 // const message2 = `私の名前は${name}です。年齢は${age}歳です。`;
 // console.log(message2);
 
-//分割代入　　配列の場合
-const myProfile = ["J2", 33];
-const message3 = `私の名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
-console.log(message3);
+// //分割代入　　配列の場合
+// const myProfile = ["J2", 33];
+// const message3 = `私の名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
+// console.log(message3);
 
-const [name, age] = myProfile;
-const message4 = `私の名前は${name}です。年齢は${age}歳です。`;
-console.log(message4);
+// // const [name, age] = myProfile;
+// // const message4 = `私の名前は${name}です。年齢は${age}歳です。`;
+// // console.log(message4);
+
+// //※分割代入の値が数字だと代入できなかった！
+// const [a, b] = myProfile;
+// const message5 = `私の名前は${a}です。年齢は${b}歳です。`;
+// console.log(message5);
+
+//デフォルト値、引数について
+const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん`);
+sayHello("J2"); //こんにちは！J2さん
+sayHello(); //デフォルト引数なしだと⇨こんにちは!undefinedさん
+//引数にデフォルト値（初期値）を設定出来た。
