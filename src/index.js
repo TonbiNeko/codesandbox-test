@@ -120,10 +120,17 @@
 
 //スプレッド構文について...
 //①配列の展開
-const arr1 = [1, 2];
-// console.log(arr1);
-// console.log(...arr1);
+// const arr1 = [1, 2];
+// // console.log(arr1);
+// // console.log(...arr1);
 
-const sumFunc = (num1, num2) => console.log(num1 + num2);
-sumFunc(arr1[0], arr1[1]);
-sumFunc(...arr1);
+// const sumFunc = (num1, num2) => console.log(num1 + num2);
+// sumFunc(arr1[0], arr1[1]);
+// sumFunc(...arr1);
+
+//②一つにまとめる
+const arr2 = [1, 2, 3, 4, 5];
+const [num1, num2, ...arr3] = arr2;
+console.log(num1);
+console.log(num2);
+console.log(arr3);
