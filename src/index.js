@@ -186,20 +186,38 @@
 // console.log(evenNumArr);
 
 //何番目のindexかわかるようにしたい時
-const nameArr = ["babu", "grogu", "J2"];
-//for文
-// for (let index = 0; index < nameArr.length; index++) {
-//   console.log(`${index + 1}番目は${nameArr[index]}です。`);
-// }
-//map　でindex　の数を取りたい時は引数を２つにする
-// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です。`));
+// const nameArr = ["babu", "grogu", "J2"];
+// //for文
+// // for (let index = 0; index < nameArr.length; index++) {
+// //   console.log(`${index + 1}番目は${nameArr[index]}です。`);
+// // }
+// //map　でindex　の数を取りたい時は引数を２つにする
+// // nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です。`));
 
-//自分以外には”さん”をつけた名前を返す
-const newNameArr = nameArr.map((name) => {
-  if (name === "J2") {
-    return name;
-  } else {
-    return `${name}さん`;
-  }
-});
-console.log(newNameArr);
+// //自分以外には”さん”をつけた名前を返す
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "J2") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+// console.log(newNameArr);
+
+//三項演算子について
+//ある条件 ? 条件がtrueの時 : 条件がfalseの時
+// const val1 = 1 > 0 ? "trueです" : "falseです";
+// console.log(val1);
+
+// const num = "1300";
+// // console.log(num.toLocaleString());
+// const formattedNum =
+//   typeof num === "number" ? num.toLocaleString() : "数値を入力してください。";
+// console.log(formattedNum);
+
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えています" : "許容範囲内です";
+};
+console.log(checkSum(50, 60));
+console.log(checkSum(10, 10));
+console.log(checkSum(50, 50)); //100だと許容範囲ないですになる
