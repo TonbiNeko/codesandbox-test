@@ -136,22 +136,70 @@
 // console.log(arr3);
 
 //配列のコピー、結合
-const arr4 = [10, 20];
-const arr5 = [30, 40];
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 
+// // const arr6 = [...arr4]; //arr4と全く同じ配列のarr6を作ることができる
+// // console.log(arr6);
+// // const arr7 = [...arr4, ...arr5];
+// // console.log(arr7); //arr4 と arr5 を結合した配列 arr7 を作ることができる
+
+// //配列をそのままコピーすると参照が引き継がれる
+// // const arr8 = arr4;
+// // arr8[0] = 100;
+// // console.log(arr8);
+// // console.log(arr4); //arr4も[100,20]となる
+
+// //スプレッド構文だと影響を受けない
 // const arr6 = [...arr4]; //arr4と全く同じ配列のarr6を作ることができる
+// arr6[0] = 100;
 // console.log(arr6);
-// const arr7 = [...arr4, ...arr5];
-// console.log(arr7); //arr4 と arr5 を結合した配列 arr7 を作ることができる
+// console.log(arr4);
 
-//配列をそのままコピーすると参照が引き継がれる
-// const arr8 = arr4;
-// arr8[0] = 100;
-// console.log(arr8);
-// console.log(arr4); //arr4も[100,20]となる
+//mapやfilterを使った配列の処理
+//const nameArr = ["babu", "grogu", "J2"];
+//for文での処理
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(nameArr[index]);
+// }
 
-//スプレッド構文だと影響を受けない
-const arr6 = [...arr4]; //arr4と全く同じ配列のarr6を作ることができる
-arr6[0] = 100;
-console.log(arr6);
-console.log(arr4);
+//mapでの処理
+//新しい配列を作成するとき
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+// console.log(nameArr2);
+//配列の中身を一つずつ処理するとき
+// nameArr.map((name) => console.log(name));
+
+//filterでの処理
+// const numArr = [1, 2, 3, 4, 5];
+// //配列から奇数だけを取り出す
+// const oddNumArr = numArr.filter((num) => {
+//   return num % 2 === 1;
+// });
+// console.log(oddNumArr);
+// //偶数だけを取り出す
+// const evenNumArr = numArr.filter((num) => {
+//   return num % 2 === 0;
+// });
+// console.log(evenNumArr);
+
+//何番目のindexかわかるようにしたい時
+const nameArr = ["babu", "grogu", "J2"];
+//for文
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(`${index + 1}番目は${nameArr[index]}です。`);
+// }
+//map　でindex　の数を取りたい時は引数を２つにする
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です。`));
+
+//自分以外には”さん”をつけた名前を返す
+const newNameArr = nameArr.map((name) => {
+  if (name === "J2") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNameArr);
